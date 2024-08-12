@@ -1,1 +1,2 @@
-href and 
+for link in links:
+#     print(link.text)

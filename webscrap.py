@@ -9,16 +9,16 @@ soup = BeautifulSoup(response.content, 'html.parser')
 
 manga_titles = []
 
-cells = soup.find_all('td')
+lines = soup.find_all('tr')
 
-def mangaSearch(cells):
-    for cell in cells:
-        links = cell.find_all('a', href=lambda href: href and href.startswith('https://blogbbm.com/manga/'))
-        manga_titles.append(links)
-        print(manga_titles)
-    return manga_titles
+links=[]
 
-print(manga_titles)
+def get_links(lines):
+    for line in lines:
+        links.extend(line.find_all('a', href=lambda href: href and href.startswith('https://blogbbm.com/manga/')))
+    return(links)
 
-for manga in manga_titles:
-    print(manga.text)
+links = get_links(lines)
+
+for link in links:
+    print(link.text)
