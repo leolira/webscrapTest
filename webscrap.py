@@ -20,5 +20,12 @@ def get_links(lines):
 
 links = get_links(lines)
 
-for link in links:
-    print(link.text)
+def get_manga_titles(links):
+    for link in links:
+        manga_titles.append(link.text)
+    return(manga_titles)
+
+manga_titles = get_manga_titles(links)
+
+for t in manga_titles:
+    print (t)
