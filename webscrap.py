@@ -25,7 +25,7 @@ def get_manga_titles(links):
         manga_titles.append(link.text)
     return(manga_titles)
 
-manga_titles = get_manga_titles(links)
+manga_titles = sorted(get_manga_titles(links))
 
 for t in manga_titles:
     print (t)

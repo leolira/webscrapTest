@@ -1,2 +1,2 @@
-for link in links:
-#     print(link.text)
+for t in manga_titles:
+#     print (t)
