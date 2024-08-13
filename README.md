@@ -1,3 +1,3 @@
 # webscrapTest
-I simple webscrap test, where I try to get data from an especific website.
-in this test I used Python, request and beautifulsoap libraries. 
+A simple webscrap test, where I get data from an especific website.
+in this test, the technology used is Python, request and beautifulsoap libraries. 
